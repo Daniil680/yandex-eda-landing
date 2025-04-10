@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа курьером Яндекс Еда — до 5000₽ в день</title>
+    <meta name="description" content="Стань курьером Яндекс Еда — зарабатывай до 5000₽ в день. Гибкий график, быстрые выплаты, удобный район. Подай заявку онлайн за 2 минуты!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Rubik', sans-serif;
+            background: #fff;
+            color: #222;
+        }
+        header {
+            background: url('images/night-courier.png') no-repeat center/cover;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+        }
+        header::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6);
+        }
+        header .content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: auto;
+        }
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        header p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background: #ffdc00;
+            color: #000;
+            padding: 14px 26px;
+            font-weight: 600;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            margin: 10px;
+        }
+        .btn:hover { background: #ffc800; }
+
+        .section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .features, .steps, .reasons, .reviews {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .feature, .step, .reason, .review {
+            flex: 1 1 45%;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        ul { padding-left: 20px; }
+
+        .faq h3 {
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .faq p {
+            display: none;
+            padding: 10px 0;
+        }
+
+        .faq h3.active + p { display: block; }
+
+        footer {
+            background: #f0f0f0;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            .feature, .step, .reason, .review { flex: 1 1 100%; }
+            header h1 { font-size: 26px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Яндекс Метрика -->
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],
+k.async=1;k.src=r;a.parentNode.insertBefore(k,a)})
+(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ym(100971066, "init", {
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true
+});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/100971066" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+<header>
+    <div class="content">
+        <h1>Стань курьером Яндекс Еда</h1>
+        <p>Зарабатывай до 5000₽ в день. Пешком, на вело или авто. Без опыта. Свободный график!</p>
+        <a class="btn" href="https://reg.eda.yandex.ru/?advertisement_campaign=forms_for_agents&user_invite_code=9df582b0d91444dd9487d4e7394edb28&utm_source=landing&utm_medium=hero" onclick="ym(100971066, 'reachGoal', 'click_form');" target="_blank">Подать заявку</a>
+    </div>
+</header>
+
+<section class="section">
+    <h2>Преимущества</h2>
+    <div class="features">
+        <div class="feature"><strong>Гибкий график:</strong> работай, когда удобно</div>
+        <div class="feature"><strong>Быстрые выплаты:</strong> деньги на карту каждый день</div>
+        <div class="feature"><strong>Без опыта:</strong> обучение онлайн за 15 минут</div>
+        <div class="feature"><strong>Удобный район:</strong> выбираешь сам, где доставлять</div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Как начать</h2>
+    <div class="steps">
+        <div class="step"><strong>1.</strong> Заполни короткую анкету</div>
+        <div class="step"><strong>2.</strong> Пройди инструктаж</div>
+        <div class="step"><strong>3.</strong> Получи доступ и начни работать</div>
+    </div>
+</section>
+
+<section class="section" style="text-align:center;">
+    <a class="btn" href="https://reg.eda.yandex.ru/?advertisement_campaign=forms_for_agents&user_invite_code=9df582b0d91444dd9487d4e7394edb28&utm_source=landing&utm_medium=cta1" onclick="ym(100971066, 'reachGoal', 'click_form');" target="_blank">Заполнить анкету</a>
+</section>
+
+<section class="section">
+    <h2>Почему выбирают нас</h2>
+    <div class="reasons">
+        <div class="reason"><strong>Быстрый старт:</strong> можно начать уже сегодня</div>
+        <div class="reason"><strong>Поддержка 24/7:</strong> всегда поможем</div>
+        <div class="reason"><strong>Бонусы за заказы:</strong> получай больше</div>
+        <div class="reason"><strong>Надёжность:</strong> официальная партнёрская программа</div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Отзывы курьеров</h2>
+    <div class="reviews">
+        <div class="review">«Работаю пешим курьером, в день выхожу на 3500–4000₽. Очень удобно!» — Артём, 23</div>
+        <div class="review">«Сама планирую смены, совмещаю с учёбой. Яндекс — топ!» — Алина, 19</div>
+    </div>
+</section>
+
+<section class="section faq">
+    <h2>Часто задаваемые вопросы</h2>
+    <h3>Какие документы нужны?</h3>
+    <p>Паспорт РФ или СНГ, ИНН, СНИЛС и Android-смартфон</p>
+    <h3>Сколько я заработаю?</h3>
+    <p>Средний доход 2500–5000₽ в день, зависит от активности</p>
+    <h3>Где я буду работать?</h3>
+    <p>Ты выбираешь сам район доставки в приложении</p>
+</section>
+
+<section class="section" style="text-align:center;">
+    <a class="btn" href="https://reg.eda.yandex.ru/?advertisement_campaign=forms_for_agents&user_invite_code=9df582b0d91444dd9487d4e7394edb28&utm_source=landing&utm_medium=cta2" onclick="ym(100971066, 'reachGoal', 'click_form');" target="_blank">Начать зарабатывать</a>
+</section>
+
+<footer>
+    Партнёрская программа Яндекс Еда. Заявки передаются через официальный сайт.
+</footer>
+
+<script>
+    // FAQ toggle
+    document.querySelectorAll('.faq h3').forEach(h3 => {
+        h3.addEventListener('click', () => {
+            h3.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>
