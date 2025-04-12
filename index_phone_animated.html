@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Стань курьером Яндекс Еда</title>
+<style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FFEB3B;
+            color: #000;
+        }
+        .hero {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            font-size: 20px;
+        }
+        .button-container {
+            margin-top: 25px;
+        }
+        .button {
+            background-color: #000;
+            color: #fff;
+            padding: 15px 25px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        .section ul {
+            padding-left: 20px;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+    
+    @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4); }
+        70% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+    }
+    #phone {
+        animation: pulse 2s infinite;
+        border: 2px solid #ff0000;
+    }
+    </style>
+</head>
+<body>
+<div class="hero">
+<h1>Стань курьером Яндекс Еды</h1>
+<p>Зарабатывай на доставках в удобное для тебя время</p>
+<div class="button-container">
+<a class="button" href="https://reg.eda.yandex.ru/?advertisement_campaign=forms_for_agents&amp;user_invite_code=9df582b0d91444dd9487d4e7394edb28&amp;utm_content=blank">Стать курьером</a>
+</div>
+</div>
+<div class="section">
+<h2>Почему выбирают нас?</h2>
+<ul>
+<li>Гибкий график — работаешь, когда удобно</li>
+<li>Доход до 3500 ₽ в день</li>
+<li>Бонусы и акции для активных курьеров</li>
+</ul>
+</div>
+<div class="section">
+<h2>Отзывы курьеров</h2>
+<ul id="review-slider" style="list-style:none; padding:0; margin:0;">
+<li style="display: block; margin-bottom: 15px;">Алексей: "Работаю в свободное время — всё устраивает!"</li>
+<li style="display: none; margin-bottom: 15px;">Марина: "Подходит как подработка. Деньги приходят вовремя."</li>
+<li style="display: none; margin-bottom: 15px;">Игорь: "Работаю в вечернее время — удобно совмещать с основной занятостью."</li>
+<li style="display: none; margin-bottom: 15px;">Кристина: "Всё честно — заказы есть, оплата приходит стабильно."</li>
+<li style="display: none; margin-bottom: 15px;">Руслан: "Начал без опыта. Всё просто: включил приложение — и работаешь."</li>
+</ul>
+</div>
+<div class="section">
+<h2>Часто задаваемые вопросы</h2>
+<ul>
+<li><strong>Нужен ли опыт?</strong> — Нет, подойдёт даже без опыта</li>
+<li><strong>Какой возраст?</strong> — От 18 лет</li>
+<li><strong>Как быстро начать?</strong> — Оставьте заявку и начните в течение 1-2 дней</li>
+</ul>
+</div>
+<div class="section">
+<p><span class="highlight">Осталось меньше 10 мест на этой неделе!</span> Успей подать заявку.</p>
+</div>
+<footer>
+        © 2025 Курьерская программа Яндекс Еды
+    
+    <div class="section" id="form">
+<h2>Оставьте заявку</h2>
+<form onsubmit="sendToTelegram(event)">
+<p><input id="name" placeholder="Ваше имя" required="" style="padding:10px; width:100%; margin-bottom:10px;" type="text"/></p>
+<p><input id="phone" placeholder="Телефон" required="" style="padding:10px; width:100%; margin-bottom:10px;" type="tel"/></p>
+<p><input id="city" placeholder="Город" required="" style="padding:10px; width:100%; margin-bottom:10px;" type="text"/></p>
+<p><button class="button" type="submit">Отправить заявку</button></p>
+</form>
+</div>
+<script>
+    function sendToTelegram(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const city = document.getElementById('city').value;
+
+        fetch('https://api.telegram.org/bot7789745258:AAF7IdjWKmB4K3UBik6whLB9jbeik1P1TYQ/sendMessage', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                chat_id: '417172526',
+                text: `Новая заявка:\nИмя: ${name}\nТелефон: ${phone}\nГород: ${city}`
+            })
+        }).then(response => {
+            if (response.ok) {
+                alert('Заявка отправлена!');
+                document.getElementById('name').value = '';
+                document.getElementById('phone').value = '';
+                document.getElementById('city').value = '';
+            } else {
+                alert('Ошибка при отправке. Попробуйте позже.');
+            }
+        });
+    }
+    </script>
+</footer>
+<script>
+let currentReview = 0;
+const reviews = document.querySelectorAll("#review-slider li");
+
+function showNextReview() {
+    reviews[currentReview].style.display = "none";
+    currentReview = (currentReview + 1) % reviews.length;
+    reviews[currentReview].style.display = "block";
+}
+
+setInterval(showNextReview, 4000);
+</script><script>
+window.onload = function() {
+    let currentReview = 0;
+    const reviews = document.querySelectorAll("#review-slider li");
+
+    function showNextReview() {
+        reviews[currentReview].style.display = "none";
+        currentReview = (currentReview + 1) % reviews.length;
+        reviews[currentReview].style.display = "block";
+    }
+
+    if (reviews.length > 1) {
+        setInterval(showNextReview, 4000);
+    }
+};
+</script><script>
+document.addEventListener("DOMContentLoaded", function() {
+    const phoneInput = document.getElementById("phone");
+    phoneInput.addEventListener("input", function(e) {
+        let x = phoneInput.value.replace(/\D/g, '').match(/(\d{1})(\d{3})(\d{3})(\d{2})(\d{2})/);
+        if (!x) return;
+        phoneInput.value = '+7 (' + x[2] + ') ' + x[3] + '-' + x[4] + '-' + x[5];
+    });
+});
+</script></body>
+</html>
